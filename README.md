@@ -23,7 +23,7 @@ The Dockerfile.go can be used to create an docker image with the tools installed
 Use the following to create a docker image:
 
 ```sh
-$ docker build -t kanchen/operator-sdk:0.0.1 -f ./Dockerfile.go
+$ docker build -t kchen/operator-sdk:0.0.1 -f ./Dockerfile.go
 ```
 
 Use the following to use the image:
