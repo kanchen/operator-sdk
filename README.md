@@ -11,9 +11,14 @@ the prerequisites to use the operator-sdk
 - [mercurial][mercurial_tool] version 3.9+
 - [docker][docker_tool] version 17.03+.
 - [kubectl][kubectl_tool] version v1.11.3+.
-- Access to a Kubernetes v1.11.3+ cluster.
 
 The Dockerfile.go can be used to create an docker image with the tools installed
+
+- [git][git_tool]
+- [go][go_tool] version v1.14
+- [mercurial][mercurial_tool] version latest
+- [docker][docker_tool] version latest
+- [kubectl][kubectl_tool] version latest
 
 Use the following to create a docker image:
 
