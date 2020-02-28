@@ -28,7 +28,7 @@ $ run -it -v /var/run/docker.sock:/var/run/docker.sock kchen/operator-sdk:0.0.1 
 ```
 
 [operator_sdk_user_guide]: https://github.com/operator-framework/operator-sdk/blob/master/doc/user-guide.md ,
-[git_tool]:https://git-scm.com/downloads
-[mercurial_tool]:https://www.mercurial-scm.org/downloads
-[go_tool]:https://golang.org/dl/
-[docker_tool]:https://docs.docker.com/install/
+[git_tool]: https://git-scm.com/downloads
+[mercurial_tool]: https://www.mercurial-scm.org/downloads
+[go_tool]: https://golang.org/dl/
+[docker_tool]: https://docs.docker.com/install/
