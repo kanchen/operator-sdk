@@ -29,7 +29,7 @@ $ docker build -t kchen/operator-sdk:0.0.1 -f ./Dockerfile.go
 Use the following to use the image:
 
 ```sh
-$ run -it -v /var/run/docker.sock:/var/run/docker.sock kchen/operator-sdk:0.0.1 /bin/sh
+$ docker run -it -v /var/run/docker.sock:/var/run/docker.sock kchen/operator-sdk:0.0.1 /bin/sh
 ```
 
 # Ansible Based operator-sdk
@@ -48,11 +48,11 @@ the prerequisites to use the operator-sdk
 The Dockerfile.go can be used to create an docker image with the tools installed
 
 - [git][git-tool]
-- [docker][docker-tool] version 17.03+.
+- [docker][docker-tool] version 19.03+
 - [kubectl][kubectl-tool] version lastest
-- [ansible][ansible-tool] version v2.6.0+
-- [ansible-runner][ansible-runner-tool] version v1.1.0+
-- [ansible-runner-http][ansible-runner-http-plugin] version v1.0.0+
+- [ansible][ansible-tool] version v2.7.7
+- [ansible-runner][ansible-runner-tool] version v1.4.4
+- [ansible-runner-http][ansible-runner-http-plugin] version v1.0.0
 - [go][go-tool] version v1.14 (Optional if you aren't installing from source)
 
 Use the following to create a docker image:
@@ -64,10 +64,8 @@ $ docker build -t kchen/ansible-operator-sdk:0.0.1 -f ./Dockerfile.go
 Use the following to use the image:
 
 ```sh
-$ run -it -v /var/run/docker.sock:/var/run/docker.sock kchen/ansible-operator-sdk:0.0.1 /bin/sh
+$ docker run -it -v /var/run/docker.sock:/var/run/docker.sock kchen/ansible-operator-sdk:0.0.1 /bin/sh
 ```
-
-
 [ansibl_operator_user_guide]: https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md
 [operator_sdk_user_guide]: https://github.com/operator-framework/operator-sdk/blob/master/doc/user-guide.md
 [git_tool]: https://git-scm.com/downloads
