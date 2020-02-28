@@ -55,6 +55,18 @@ The Dockerfile.go can be used to create an docker image with the tools installed
 - [ansible-runner-http][ansible-runner-http-plugin] version v1.0.0+
 - [go][go-tool] version v1.14 (Optional if you aren't installing from source)
 
+Use the following to create a docker image:
+
+```sh
+$ docker build -t kchen/ansible-operator-sdk:0.0.1 -f ./Dockerfile.go
+```
+
+Use the following to use the image:
+
+```sh
+$ run -it -v /var/run/docker.sock:/var/run/docker.sock kchen/ansible-operator-sdk:0.0.1 /bin/sh
+```
+
 
 [ansibl_operator_user_guide]: https://github.com/operator-framework/operator-sdk/blob/master/doc/ansible/user-guide.md
 [operator_sdk_user_guide]: https://github.com/operator-framework/operator-sdk/blob/master/doc/user-guide.md
