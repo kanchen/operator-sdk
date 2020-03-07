@@ -1,0 +1,30 @@
+FROM golang:1.14
+
+RUN apt-get update 
+RUN apt-get install curl 
+
+# Install Docker
+RUN curl -fsSL https://get.docker.com -o get-docker.sh 
+RUN sh get-docker.sh  && rm get-docker.sh
+
+#Install Ansible
+RUN apt install -y software-properties-common
+#RUN apt-add-repository --yes --update ppa:ansible/ansible
+RUN apt install -y ansible
+
+# Install kubectl
+RUN apt-get install apt-transport-https 
+RUN curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg |  apt-key add - 
+RUN echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list 
+RUN apt-get update 
+RUN apt-get install kubectl 
+
+RUN apt update
+RUN apt install -y python-pip
+RUN pip install ansible-runner
+RUN pip install ansible-runner-http
+
+# Install operator-sdk
+RUN curl -LO https://github.com/operator-framework/operator-sdk/releases/download/v0.15.2/operator-sdk-v0.15.2-x86_64-linux-gnu
+RUN chmod +x operator-sdk-v0.15.2-x86_64-linux-gnu && mkdir -p /usr/local/bin/ && cp operator-sdk-v0.15.2-x86_64-linux-gnu /usr/local/bin/operator-sdk && rm operator-sdk-v0.15.2-x86_64-linux-gnu
+
